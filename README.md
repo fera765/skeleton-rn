@@ -36,9 +36,9 @@
   <a href="https://github.com/fera765" target="_blank">Autor</a>
 </p>
 
-<center>
-<img src="https://github.com/fera765/skeleton-rn/demo/exemplo.gif" />
-</center>
+<p align="center">
+<img src="https://raw.githubusercontent.com/fera765/skeleton-rn/main/demo/exemplo.gif" />
+</p>
 
 <br>
 
@@ -65,12 +65,12 @@ Example 01
 ```js
 import React from 'react';
 import { View } from 'react-native';
-import Skeletosn from 'skeleton-rn';
+import Skeleton from 'skeleton-rn';
 
 const App: React.FC = () => {
   return (
     <View style={{flex: 1}}>
-      <Skeletosn
+      <Skeleton
         background={['#e9e6ed', '#dddddd', '#eeeeee', '#e9e6ed', '#e9e6ed']}
         duration={3000}
       />
