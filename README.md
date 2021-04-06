@@ -2,28 +2,28 @@
   <!-- <a href="https://nativetimeago.netlify.com">Demo</a> -->
 </div>
 
-<h1 align="center">React Native Gallery</h1>
+<h1 align="center">React Native Skeleton</h1>
 
 <p align="center">
-  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/fera765/gallery-rn?color=56BEB8">
+  <img alt="Principal linguagem do projeto" src="https://img.shields.io/github/languages/top/fera765/skeleton-rn?color=56BEB8">
 
-  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/fera765/gallery-rn?color=56BEB8">
+  <img alt="Quantidade de linguagens utilizadas" src="https://img.shields.io/github/languages/count/fera765/skeleton-rn?color=56BEB8">
 
-  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/fera765/gallery-rn?color=56BEB8">
+  <img alt="Tamanho do repositório" src="https://img.shields.io/github/repo-size/fera765/skeleton-rn?color=56BEB8">
 
-  <img alt="Licença" src="https://img.shields.io/github/license/fera765/gallery-rn?color=56BEB8">
+  <img alt="Licença" src="https://img.shields.io/github/license/fera765/skeleton-rn?color=56BEB8">
 
-  <img alt="Github issues" src="https://img.shields.io/github/issues/fera765/gallery-rn?color=56BEB8" />
+  <img alt="Github issues" src="https://img.shields.io/github/issues/fera765/skeleton-rn?color=56BEB8" />
 
-  <img alt="Github forks" src="https://img.shields.io/github/forks/fera765/gallery-rn?color=56BEB8" />
+  <img alt="Github forks" src="https://img.shields.io/github/forks/fera765/skeleton-rn?color=56BEB8" />
 
-  <img alt="Github stars" src="https://img.shields.io/github/stars/fera765/gallery-rn?color=56BEB8" />
+  <img alt="Github stars" src="https://img.shields.io/github/stars/fera765/skeleton-rn?color=56BEB8" />
 </p>
 
 <!-- Status -->
 
 <!-- <h4 align="center">
-	🚧  React Native Gallery 🚀 Em construção...  🚧
+	🚧  React Native Skeleton 🚀 Em construção...  🚧
 </h4>
 
 <hr> -->
@@ -36,73 +36,80 @@
   <a href="https://github.com/fera765" target="_blank">Autor</a>
 </p>
 
+<center>
+<img src="https://github.com/fera765/skeleton-rn/demo/exemplo.gif" />
+</center>
+
 <br>
 
 ## :wrench: Installation ##
 
 
 ```txt
-Install cameraroll
+Install skeleton
 
-yarn add @react-native-community/cameraroll@4.0.0
-
-or if you prefer
-
-npm install @react-native-community/cameraroll@4.0.0 --save
-
-Then link to the project
-react-native link @react-native-community/cameraroll
-
-
-Install Vector Icons
-
-yarn add react-native-vector-icons
+yarn add skeleton-rn
 
 or if you prefer
 
-npm install react-native-vector-icons --save
-
-Then link to the project
-react-native link react-native-vector-icons
-
+npm install skeleton-rn
 ```
 
-In case of any problem when executing the project, access the website  - [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)
 ## :sparkles: Functionalities ##
 
-:heavy_check_mark: Gallery for selecting media;
+:heavy_check_mark: Create a skeleton of your component with a loading effect.
 
 ## :star: Example ##
 
-Example
+Example 01
 ```js
-import React, { useState, useCallback } from 'react';
+import React from 'react';
 import { View } from 'react-native';
-import Gallery from 'gallery-rn';
+import Skeletosn from 'skeleton-rn';
 
-interface IITem {
-  id: string;
-  name: string;
-  uri: string;
-}
-
-const App = () => {
-  const [images, setImages] = useState<IITem[]>([]);
-
-  const handleListImages = useCallback((items: IITem[]) => {
-    setImages([...items]);
-  }, []);
-
+const App: React.FC = () => {
   return (
     <View style={{flex: 1}}>
-      <Gallery
-        onPress={e => handleListImages(e)}
-        limit={20}
-        listSelected={images}
+      <Skeletosn
+        background={['#e9e6ed', '#dddddd', '#eeeeee', '#e9e6ed', '#e9e6ed']}
+        duration={3000}
       />
+      <Skeleton />
     </View>
-  )
-}
+  );
+};
+
+export default App;
+
+```
+
+Example 02 styled-components or rn-css
+```js
+//styles.ts
+import Skeleton from 'skeleton-rn';
+import styled from 'styled-components/native';
+//import styled from 'rn-css';
+
+export const Name = styled(Skeleton)`
+  widht: 100px;
+  height: 40px;
+  border-radius: 20px;
+`;
+
+import React from 'react';
+import { View } from 'react-native';
+import { Name } from './styles';
+
+const App: React.FC = () => {
+  return (
+    <View style={{flex: 1}}>
+      <Name />
+    </View>
+  );
+};
+
+export default App;
+
 ```
 
 ## :rocket: Technology ##
@@ -112,9 +119,6 @@ The following tools were used in the construction of the project:
 - [Node.js](https://nodejs.org/en/)
 - [React Native](https://reactnative.dev/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [@react-native-community/cameraroll](https://www.npmjs.com/package/@react-native-community/cameraroll)
-- [md5](https://www.npmjs.com/package/md5)
-- [rn-css](https://www.npmjs.com/package/rn-css)
 
 ## :memo: Licença ##
 

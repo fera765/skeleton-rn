@@ -26,7 +26,7 @@ const Skeleton: React.FC<ISkeleton> = ({
 
   const inputRange = Array(background.length)
     .fill(0)
-    .map((e, i) => i / background.length);
+    .map((_, i) => i / background.length);
   const interṕolatedValue = animation.interpolate({
     inputRange,
     outputRange: background,
